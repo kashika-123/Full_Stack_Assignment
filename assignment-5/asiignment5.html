@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Map</title>
+    <style>
+        img[usemap],map area{
+            outline: none ;
+        }
+    </style>
+
+</head>
+
+<body style="background-color:rgb(144,180,235);">
+    <p style="text-align: center;"><img alt="Menu Bar"  src="../images/photo_2020-07-24_23-40-06.jpg" usemap="#map1"></p>
+    <map name="map">
+        <map id="map1" name="map1">
+            <area alt="home" coords="10,10, 110, 60," href="../index.html" shape="rect" />
+            <area alt="assignment-1" coords="145,10, 310,60," href="../assignment-1/assignment1.html" shape="rect" />
+            <area alt="assignment-2" coords="340,10, 520,60," href="../assignment-2/assignment2.html" shape="rect" />
+            <area alt="assignment-3" coords="560,10, 730,60," href="../assignment-3/assignment3.html" shape="rect" />
+            <area alt="assignment-4" coords="770,10, 950,60," href="../assignment-4/assignment4.html" shape="rect" />
+            <area alt="assignment-5" coords="990,10, 1160,60," href="#" shape="rect" />
+        </map>
+        <h1 style="text-align: center; color: white;">Introduction to Front-End Technologies</h1>
+        <p style="text-align: center;"><img alt="logo" src="../images/Practical-5.jpg" usemap="#map2"></p>
+        <map id="map2" name="map2">
+            <area alt="html" coords="20,10, 170,170" href="html.html" shape="rect" />
+            <area alt="css" coords="290,90,80" href="css.html" shape="circle" />
+            <area alt="javascript" coords="20,200, 170, 340," href="javascript.html" shape="rect" />
+            <area alt="bootstrap" coords="290,200,230,220,240,300, 290,330, 330, 300, 340,220" href="bootstrap.html" shape="poly">
+        </map>
+        <p style="text-align: center; color:red; font-size: 20px;">Click on any part of the logo to know more about these technologies.
+        </p>
+</body>
+
+</html>
