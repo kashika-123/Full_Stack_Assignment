@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practical-7</title>
+</head>
+
+<style>
+    body{
+        background-color: white;
+        
+    }
+
+
+    .header {
+            width: 100%;
+            height: 85px;
+            background-color: grey;
+            padding: 0px 0px;
+            position: fixed;
+        }
+
+        .header h2 {
+            line-height: 70px;
+            float: left;
+            text-transform: uppercase;
+            cursor: pointer;
+        }
+
+        .menu {
+            list-style: none;
+            text-align: center;
+        }
+
+        .menu li {
+            display: inline-block;
+            margin: 13px 60px;
+            padding: 0px 0px;
+            padding-bottom: 20px;
+
+        }
+
+        .menu a:hover {
+            color: black;
+            background-color: white;
+        }
+
+        .menu li a {
+            text-decoration: none;
+            font-size: 20px;
+            text-transform: uppercase;
+            padding: 10px 10px;
+            color: white;
+        }
+
+
+.aboutus{
+    display: block;
+    width: 98%;
+    margin-left: auto;
+    margin-right: auto;
+
+}
+.project {
+            display: flex;
+        }
+
+        .project .ab {
+            
+            width: 48%;
+            font-size: 25px;
+            background-color: grey;
+            color: white;
+            height: 80vh;
+            margin-left: 13px;
+            
+            
+        }
+        .project .ab h3{
+            margin-top: 6px;
+            margin-bottom: 26px;
+            margin-left: 8px;
+         
+           
+            text-align: left;
+        }
+        .project .ab p{
+            padding: 5px 5px;
+
+        }
+        .project .pro {
+            width: 49%;
+            height: 80vh;
+            display: flex;
+            flex-direction: column;
+            margin-left: 20px;
+        }
+
+        .project .pro h2 {
+            margin-bottom: 15px;
+            height: 33vh;
+            font-size: 28px;
+            text-align: center;
+        }
+
+        #pr1 {
+            background-image: url('../images/p1.jpg');
+
+        }
+
+        #pr2 {
+            background-image: url('../images/p2.jpeg');
+
+        }
+
+        #pr3 {
+            background-image: url('../images/p3.jpg');
+        }
+
+
+
+     
+
+
+       
+    .banner{
+        
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        width: 98%;
+        padding-top: 100px;
+       
+    }
+    .banner img{
+        width: 100%;
+        height: 100vh;
+    }
+    .banner h1{
+        position: absolute;
+        font-family: Arial, Helvetica, sans-serif;
+        color: white;
+        left: 30px;
+
+    
+
+    }
+    .section1{
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        width: 98%;
+    }
+    .section1 img{
+      
+        border-radius: 100%;
+        margin: 0px 67px;
+       
+
+    }
+    .section1 h2{
+        text-align: center;
+        font-weight: 700;
+        font-family: Arial, Helvetica, sans-serif;
+
+    }
+
+   
+
+
+
+    .section3{
+      
+        margin-left: auto;
+        margin-right: auto;
+        width: 98%;
+    }
+    .section3 h3{
+          text-align: center; 
+          color: black; 
+          font-weight: 600;
+          font-size: 20px;
+
+        }
+    .section3 .box{
+        display: inline-block;
+            width: 300px;
+            height: 500px;
+            padding: 10px 10px;
+            margin: 20px 15px;
+            background-color: lightgrey;
+            border-radius: 10px;
+        }
+       
+           
+       
+        .section3  p{
+          padding: 0px 15px;
+        }
+       .section3 img{
+            display: block;
+            margin-left:auto;
+            margin-right:auto;
+            width: 50%;
+            height: 194px;
+           width: 260px;
+            border-radius: 10px;
+        }
+        .section3 .link{
+          border: solid black 3 px;
+          background-color: red;
+          padding: 10px 90px;
+          text-align: center;
+          color: white;
+          text-decoration: none;
+          border-radius: 10px;
+         
+        }
+        .section3 .link:hover{
+         background-color:blue;
+          color: yellow;
+        }
+
+
+
+    .section4{
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        width: 98%;
+       
+      }
+    
+    .section4 .footer{
+        text-align: center;
+        height: 80px;
+        padding-top: 8px;
+        
+        background-color: peru;
+        margin-bottom: 10px
+    }
+    .section4 .footer h3{
+        text-align: center;
+        text-transform: uppercase;
+        padding-top: 10px  ;
+        
+    }
+   
+   
+</style>
+
+
+<body>
+    <div id="navbar" class="header">
+        <ul class="menu">
+            <li><a href="#">Home</a></li>
+            <li><a href="#aboutUs">About Us</a></li>
+            <li><a href="#team">Team</a></li>
+            <li><a href="#techno">Technologies</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+
+
+</div>
+
+
+  
+
+    <div id="banner" class="banner">
+        <h1>Practical-8</h1>
+        <img src="../images/emile-perron-xrVDYZRGdw4-unsplash.jpg">
+    </div>
+
+    <div id="team" class="section1">
+        <h2>Team Members</h2>
+        <img src="../images/1.png" alt="">
+        <img src="../images/2.png" alt="">
+        <img src="../images/3.png" alt="">
+        <img src="../images/9.png" alt="">
+
+    </div>
+
+   
+
+        <div id="aboutUs" class="about">
+            <div>
+                <h1 style="font-family: Arial, Helvetica, sans-serif; text-align: center;">About Us</h1>
+                <br>
+            </div>
+            <div class="project">
+                <div class="ab">
+                    <h3>About Projects</h3>
+                  <p>  Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto neque saepe placeat officia
+                    animi incidunt labore exercitationem alias eaque deleniti quasi ab, odio assumenda sit hic? Ad maxime
+                    autem harum.Odio necessitatibus sed commodi, molestiae at sunt repellendus assumenda, exercitationem eaque
+                    aspernatur asperiores, quod aperiam ipsa. Veritatis eos assumenda quod odio corporis. At consequuntur
+                    eum distinctio nobis non vitae eveniet. Maiores odit delectus architecto, tempore dolore facilis ipsum officia reprehenderit mollitia vero ea,pariatur rerum praesentium libero. Iure consequatur quae cum praesentium libero modi unde minuseligendi! Libero, quaerat ad? Dicta cumque hperferendis earum rerum molestias quaerat debitis vero eaque ipsa, adipisci nullpariatur.Inventore libero commodi architecto consequuntur autem nihil nostrum sunt, animi saofficiasuscipitsequi est itaque repellendus excepturi iure vero neque laborum. Quasi ducimus beatae provident placeateligendi! Libero, quaerat ad?Dicta cumque hperferendis earum rerum molestias quaerat debitis vero eaque ipsaadipisci nullapariatur.Inventore libero commodi architecto consequuntur autem nihil nostrum sunt, animi saepofficiasuscipisequi est itaque repellendus excepturi iure vero ne
+               </p>
+                </div>
+                <div class="pro">
+                    <h2 id="pr1">Project-1</h2>
+                    <h2 id="pr2">Project-2</h2>
+                    <h2 id="pr3">Project-3</h2>
+                </div>
+            </div>
+        </div>
+
+    <div id="techno" class="section3">
+        <h2 style="font-family: Arial, Helvetica, sans-serif; text-align: center;">Technologies Used</h2>
+        <div class="box">
+        
+            <img src="../images/2897.png" class="image">
+            <h3>Introduction to HTML</h3>
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Maiores veritatis iure cumque tempore accusamus, possimus exercitationem soluta sint praesentium sunt quisquam at odit quam repellendus illum libero voluptatum animi numquam?</p>
+            <a class="link" href="../assignment-5/html.html" alt="html">READ MORE</a>
+          </div>
+      
+          <div class="box">
+             
+              <img src="../images/images.jpg" class="image">
+              <h3>Introduction to CSS</h3>
+              <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Maiores veritatis iure cumque tempore accusamus, possimus exercitationem soluta sint praesentium sunt quisquam at odit quam repellendus illum libero voluptatum animi numquam?</p>
+              <a class="link" href="../assignment-5/css.html" alt="html">READ MORE</a>
+            </div>
+      
+            <div class="box">
+           
+              <img src="../images/Introduction-to-JavaScript-with-complete-Guide-1.jpg" class="image">
+              <h3>Introduction to JAVASCRIPT</h3>
+              <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Maiores veritatis iure cumque tempore accusamus, possimus exercitationem soluta sint praesentium sunt quisquam at odit quam repellendus illum libero voluptatum animi numquam?</p>
+                <a class="link" href="../assignment-5/javascript.html" alt="html">READ MORE</a>
+            </div>
+      
+            <div class="box">
+             
+              <img src="../images/Bootstrap.jpg" class="image">
+              <h3>Introduction to BOOTSTRAP</h3>
+              <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Maiores veritatis iure cumque tempore accusamus, possimus exercitationem soluta sint praesentium sunt quisquam at odit quam repellendus illum libero voluptatum animi numquam?</p>
+              <a class="link" href="../assignment-5/bootstrap.html" alt="html">READ MORE</a>
+            </div>
+         
+
+    </div>
+
+    <div id="contact" class="section4">
+        <h2 style="text-align: center; font-family: Arial, Helvetica, sans-serif;">Contact</h2>
+     <div class="footer">
+         <p style="font-family: Arial, Helvetica, sans-serif; font-size: 18px;">Website Template for Practical-8 &copy <a href="https://www.beta-labs.in/">Beta Labs</a></p>
+         <a href="#banner">Back to top</a>
+        </div>
+
+    </div>
+
+    
+</body>
+</html>
