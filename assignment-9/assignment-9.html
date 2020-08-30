@@ -1,0 +1,602 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Practical 9</title>
+    <style>
+        * {
+            margin: 0px;
+            padding: 0px;
+            scroll-behavior: smooth;
+
+        }
+
+        #container {
+            margin: 8px;
+        }
+
+
+
+        #header {
+            background-color: grey;
+            color: white;
+            line-height: 70px;
+            position: sticky;
+            top: 0px;
+
+        }
+
+        .menu {
+            float: right;
+            list-style-type: none;
+        }
+
+        .menu li {
+            display: inline-block;
+            line-height: 70px;
+            position: relative;
+
+
+        }
+
+        .menu li a {
+            text-decoration: none;
+            font-size: 20px;
+            padding: 20px;
+            color: white;
+
+        }
+
+        .menu li a {
+            text-decoration: none;
+            color: white;
+            padding: 20px;
+            font-size: 20px;
+            transition: 0.5s;
+
+        }
+
+        .menu li a:hover,
+        .show-btn:hover,
+        .hide-btn:hover {
+            background-color: grey;
+            color: lightskyblue;
+            transition: 0.4;
+        }
+
+        .show-btn {
+            float: right;
+            font-size: 20px;
+            margin-right: 30px;
+
+        }
+
+        #chk {
+            position: absolute;
+            visibility: hidden;
+            z-index: -10;
+        }
+
+        .show-btn,
+        .hide-btn {
+            font-size: 30px;
+            color: white;
+            line-height: 70px;
+            display: none;
+
+        }
+
+        #header::after {
+            content: " ";
+            display: block;
+            clear: both;
+        }
+
+
+        #banner {
+            height: 700px;
+            background-color: lightblue;
+            background-image: url(../images/emile-perron-xrVDYZRGdw4-unsplash.jpg);
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
+            color: white;
+            margin-top: 2%;
+            
+
+
+        }
+
+        #section1 {
+            font-size: 16px;
+            color: black;
+            /* border: 2px solid blue; */
+        }
+
+        #image1 {
+            /* border: 1px solid red; */
+            display: flex;
+            align-content: space-around;
+            justify-content: space-around;
+            flex-wrap: wrap;
+        }
+
+        .image {
+            display: inline-block;
+            /* border: 1px solid black; */
+            width: 20%;
+            /* margin: 0px 2px 0px 27px; */
+            /* margin-right: 20px; */
+            padding: 20px;
+        }
+
+        .image img {
+            width: 100%;
+            border-radius: 400px;
+            display: inline-block;
+
+        }
+
+
+        #section2 {
+            color: black;
+            margin-bottom: 5%;
+
+        }
+
+        .content {
+            display: flex;
+            height: auto;
+        }
+
+        .main-content {
+            width: 50%;
+            height: 500px;
+            background-color: grey;
+            font-size: 18px;
+            color: white;
+            padding: 10px;
+            text-align: justify;
+        }
+
+        .main-content h2 {
+            height: 60px;
+        }
+
+        .right {
+            width: 50%;
+            margin-left: 5px;
+        }
+
+
+        .article {
+            height: 160px;
+
+            background-color: orange;
+            margin-bottom: 20px;
+            color: white;
+        }
+
+        .article img {
+            width: 100%;
+            height: 160px;
+        }
+
+
+        #section3 {
+            color: black;
+            padding: 0px 20px;
+            
+
+        }
+
+        .content1 {
+            display: flex;
+            justify-content: space-between;
+            align-content: space-between;
+
+        }
+
+        .contain {
+            width: 20%;
+            background-color: lightgray;
+        }
+
+
+
+        .htm img {
+            border-radius: 8px;
+            height: 150px;
+        }
+
+        .htm p {
+            text-align: justify;
+            padding: 10px;
+        }
+
+        .htm a {
+            display: block;
+            text-decoration: none;
+            background-color: red;
+            text-align: center;
+            font-size: 20px;
+            border-radius: 8px;
+            padding: 4px;
+            color: white;
+        }
+
+        a:hover {
+            background-color: blue;
+        }
+
+
+        #section4 {
+            font-size: 16px;
+            color: black;
+
+        }
+
+        #footer {
+            background-color: violet;
+            padding: 20px;
+            color: black;
+            text-align: center;
+        }
+
+        @media screen and (max-width: 1119px) and (min-width: 801px) {
+            #banner {
+                height: 500px;
+            }
+
+            .content1{
+                display: flex;
+                flex-wrap: wrap;
+            }
+
+            .contain {
+                width: 45%;
+                margin-bottom: 5%;
+            }
+
+            .image {
+                width: 40%;
+            }
+
+        }
+
+        @media screen and (max-width: 800px) and (min-width: 625px){
+            #banner {
+                height: 400px;
+            }
+
+            .menu li {
+                display: none;
+            }
+
+
+            .show-btn,
+            .hide-btn {
+                display: block;
+            }
+
+            .menu {
+                position: fixed;
+                top: 0;
+                background-color: black;
+                width: 100%;
+                height: 400px;
+                text-align: center;
+                padding: 60px 0px 40px 0px;
+                right: -100%;
+                transition: 0.7s;
+
+
+            }
+
+            .menu li {
+                display: block;
+                /* padding: 20px 0; */
+            }
+
+            .menu li a {
+                display: block;
+                padding: 5px;
+            }
+
+
+            .hide-btn {
+                position: absolute;
+                top: 10px;
+                right: 30px;
+            }
+
+            #chk:checked~.menu {
+                right: 0;
+            }
+            .content{
+                display: flex;
+                flex-wrap: wrap;
+            }
+            .main-content{
+                width: 100%;
+            }
+            .right{
+                width: 100%;
+                margin: 10px 0px 0px 0px;
+            }
+            #image1{
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: unset;
+                align-content: unset;
+            }
+
+            .image {
+                width: 100%;
+                text-align: center;
+            }
+            .image img{
+                width: 60%;
+            }
+
+            .content1{
+                display: flex;
+                flex-wrap: wrap;
+            }
+            .contain{
+                width: 44%;
+                margin-bottom: 5%;
+            }
+
+            
+
+        }
+
+        @media screen and (max-width: 624px){
+            #banner {
+                height: 300px;
+            }
+
+            .menu li {
+                display: none;
+            }
+
+
+            .show-btn,
+            .hide-btn {
+                display: block;
+            }
+
+            .menu {
+                position: fixed;
+                top: 0;
+                background-color: black;
+                width: 100%;
+                height: auto;
+                text-align: center;
+                padding: 60px 0px 0px 0px;
+                right: -100%;
+                transition: 0.7s;
+
+
+            }
+
+            .menu li {
+                display: block;
+                /* padding: 20px 0; */
+            }
+
+            .menu li a {
+                display: block;
+            }
+
+            .menu li a {
+                padding: 5px;
+            }
+
+            .hide-btn {
+                position: absolute;
+                top: 5px;
+                right: 35px;
+            }
+
+            #chk:checked~.menu {
+                right: 0;
+            }
+            .content{
+                display: flex;
+                flex-wrap: wrap;
+            }
+            .main-content{
+                width: 100%;
+            }
+            .right{
+                width: 100%;
+                margin-top: 10px;
+            }
+            .content1{
+                display: flex;
+                flex-wrap: wrap;
+            }
+            .contain{
+                width: 100%;
+                margin-bottom: 5%;
+            }
+            #image1{
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: unset;
+                align-content: unset;
+            }
+
+            .image {
+                width: 100%;
+                text-align: center;
+            }
+            .image img{
+                width: 60%;
+            }
+
+
+
+        }
+    </style>
+
+</head>
+
+<body>
+    <div id="container">
+        <div id="header">
+            <input type="checkbox" id="chk">
+            <label for="chk" class="show-btn">
+                <i class="fa fa-bars"></i>
+            </label>
+            <ul class="menu">
+                <li><a href="#">HOME</a></li>
+                <li><a href="#section2">ABOUT US</a></li>
+                <li> <a href="#section1">TEAM</a></li>
+                <li><a href="#section3">TECHNOLOGIES</a></li>
+                <li><a href="#section4">CONTACT</a></li>
+
+                <label for="chk" class="hide-btn">
+                    <i class="fa fa-times"></i>
+                </label>
+            </ul>
+
+        </div>
+
+        <div id="banner">
+            <h1 style="padding: 20px;">PRACTICAL - 8</h1>
+        </div>
+        <div id="section1">
+            <br><br><br><br><br>
+            <h1 style="text-align :center">Team Members</h1>
+            <br><br>
+            <div id="image1">
+
+                <div class="image">
+                    <img src="../images/1.png" alt="member1">
+                </div>
+                <div class="image">
+                    <img src="../images/2.png" alt="member2">
+                </div>
+                <div class="image">
+                    <img src="../images/3.png" alt="member3">
+                </div>
+                <div class="image">
+                    <img src="../images/9.png" alt="member4">
+                </div>
+            </div>
+        </div>
+
+        <div id="section2">
+            <br><br><br><br><br>
+            <h1 style="text-align: center;">About Us</h1>
+            <br><br>
+            <div class="content">
+                <div class="main-content">
+                    <h2>About Projects</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Non placeat culpa distinctio omnis
+                        molestias tempore fugit itaque nemo quia! Ea dolor quod explicabo architecto repellat, labore
+                        quia earum ducimus adipisci quas ullam incidunt soluta, aperiam quibusdam asperiores cupiditate
+                        tempore vel. Consequatur nisi veniam in laudantium facilis minima repellat neque ut culpa! Atque
+                        enim inventore at corporis, temporibus quis fugit sint laboriosam facere neque? Dolor molestias,
+                        cum maiores laborum accusantium ducimus corrupti optio odio, ipsa sed repellat facilis eos eum
+                        quidem id fugit, inventore repellendus ad dolorum culpa nemo repudiandae autem praesentium rem!
+                        Nam adipisci totam, tempora explicabo voluptatum error sed minima corrupti quasi asperiores
+                        itaque, beatae sapiente praesentium id impedit nulla molestias facilis incidunt accusamus veniam
+                        odit doloribus eius ratione optio! Odio aut voluptates ipsum cupiditate modi, quos repellat
+                        beatae veniam repellendus voluptatibus, esse autem mollitia earum veritatis placeat quae dolorum
+                        corrupti. Inventore voluptatibus, blanditiis natus repudiandae rem molestiae reiciendis corrupti
+                        earum praesentium amet cumque maiores ab ut ea autem minima doloribus dolore odit omnis
+                        laboriosam. Fuga nobis dignissimos architecto nam provident sit molestias deserunt pariatur enim
+                        exercitationem aliquid ad vero amet tempore ipsa modi at, voluptatum eaque ipsam. Voluptas
+                        facere nobis voluptatem maiores illo dignissimos voluptates modi ad. Dolor.</p>
+                </div>
+                <div class="right">
+                    <div class="article">
+                        <img src="../images/p1.jpg" alt="article 1">
+                    </div>
+                    <div class="article">
+                        <img src="../images/p2.jpeg" alt="article 2">
+                    </div>
+                    <div class="article">
+                        <img src="../images/p3.jpg" alt="article 3">
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+        <div id="section3">
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <h1 style="text-align: center;">Technologies Used</h1>
+            <br><br>
+            <div class="content1">
+
+                <div class="contain">
+                    <div class="htm">
+                        <img src="../images/2897.png" alt="html image" width="100%">
+                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Soluta dicta itaque corporis facere
+                            voluptas.
+                            Similique doloremque quasi magni perferendis quod!</p>
+                        <a href="../assignment-5/html.html">Read more</a>
+                    </div>
+                </div>
+                <div class="contain">
+                    <div class="htm">
+                        <img src="../images/hero.png" alt="css image" width="100%">
+                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Soluta dicta itaque corporis facere
+                            voluptas.
+                            Similique doloremque quasi magni perferendis quod!</p>
+                        <a href="../assignment-5/css.html">Read more</a>
+                    </div>
+                </div>
+                <div class="contain">
+                    <div class="htm">
+                        <img src="../images/Bootstrap.jpg" alt="bootstrap image" width="100%">
+                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Soluta dicta itaque corporis facere
+                            voluptas.
+                            Similique doloremque quasi magni perferendis quod!</p>
+                        <a href="../assignment-5/bootstrap.html">Read more</a>
+                    </div>
+                </div>
+                <div class="contain">
+                    <div class="htm">
+                        <img src="../images/Introduction-to-JavaScript-with-complete-Guide-1.jpg" alt="javascript image" width="100%">
+                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Soluta dicta itaque corporis facere
+                            voluptas.
+                            Similique doloremque quasi magni perferendis quod!</p>
+                        <a href="../assignment-5/javascript.html">Read more</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="section4">
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <h1 style="text-align: center;">Contact</h1><br><br>
+
+            <div id="footer">
+                <div style="margin-bottom: 10px;">Website Template For Practical-8 &copy <a
+                        href="https://www.beta-labs.in/">Beta-labs</a></div>
+                <a href="#header">Back to top</a>
+            </div>
+
+        </div>
+
+    </div>
+    </div>
+</body>
+
+</html>
